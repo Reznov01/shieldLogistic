@@ -8,7 +8,6 @@ import {
   Instagram,
   Linkedin,
 } from "lucide-react";
-import shieldLogo from "../../../public/ShieldLogo.webp";
 
 export default function Footer() {
   return (
@@ -19,7 +18,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <img
-                src={shieldLogo}
+                src="/shieldLogo.webp"
                 alt="logo de empresa shield logistic"
                 className="h-20 w-20"
               />
