@@ -1,4 +1,4 @@
-import serviciosLayer from "../../assets/layers/sectionLayer.svg";
+import serviciosLayer from "../../assets/layers/SectionLayer.svg";
 import { TbShieldStar } from "react-icons/tb";
 import servicios from "../../assets/img/lobi.webp";
 
