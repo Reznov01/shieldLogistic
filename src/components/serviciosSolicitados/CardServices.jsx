@@ -12,7 +12,14 @@ export default function CardServices({
 }) {
   return (
     <div className="card bg-base-100 w-[600px] h-[450px] ">
-      <div className="card-body bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition-colors ">
+      <div className="card-head">
+        <img
+          src={img}
+          alt="imagen ilustrativa de servicios"
+          className="w-full h-[300px] object-cover rounded-t-2xl"
+        />
+      </div>
+      <div className="card-body bg-gray-700 text-white rounded-b-lg hover:bg-gray-800 transition-colors ">
         <div className="p-6">
           <p className="text-4xl bg-gray-400 w-fit p-3 rounded-md text-black mt-3">
             {icon}
