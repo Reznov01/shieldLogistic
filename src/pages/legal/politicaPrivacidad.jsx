@@ -1,5 +1,7 @@
 import React from "react";
 
-export default function PoliticaPrivacidad() {
-  return <div>politicaPrivacidad</div>;
-}
+const PoliticaPrivacidad = () => {
+  return <div>Política de Privacidad</div>;
+};
+
+export default PoliticaPrivacidad;

@@ -206,7 +206,7 @@ export default function GallerySection() {
   }, [selectedImage, currentIndex, filteredImages]);
 
   return (
-    <section className="bg-gray-50 py-16">
+    <section className="bg-gray-50 py-16 my-20">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-12">

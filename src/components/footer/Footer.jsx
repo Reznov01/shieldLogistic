@@ -157,19 +157,24 @@ export default function Footer() {
             </span>
           </p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            {[
-              "Política de Privacidad",
-              "Términos y Condiciones",
-              "Aviso Legal",
-            ].map((item, index) => (
-              <a
-                key={index}
-                href="#"
-                className="text-xs text-slate-500 hover:text-primary transition-colors"
-              >
-                {item}
-              </a>
-            ))}
+            <a
+              href="politica-privacidad"
+              className="text-xs text-slate-500 hover:text-blue-300 transition-colors"
+            >
+              Política de Privacidad
+            </a>{" "}
+            <a
+              href="terminos-condiciones"
+              className="text-xs text-slate-500 hover:text-blue-300 transition-colors"
+            >
+              Términos y Condiciones
+            </a>{" "}
+            <a
+              href="aviso-legal"
+              className="text-xs text-slate-500 hover:text-blue-300 transition-colors"
+            >
+              Aviso Legal
+            </a>
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@ export default function Nav() {
   }, [menuOpen]);
 
   return (
-    <nav className="bg-transparent z-10 absolute w-screen z-50">
+    <nav className="bg-transparent  absolute w-screen z-50">
       <div className="max-w-screen-xl flex flex-wrap h-[70px] sm:h-[90px] items-center justify-between mx-auto p-4 relative">
         <div className="flex items-center 2xl:-ml-20 space-x-3 rtl:space-x-reverse">
           <Link to="/">
