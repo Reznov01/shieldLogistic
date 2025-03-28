@@ -4,7 +4,7 @@ import Postulate from "./pages/jobs/Postulate";
 import AtencionClientes from "./pages/customerServices/AtencionClientes";
 import Cotizacion from "./pages/quote/Cotizacion";
 import PreguntasFrecuentes from "./pages/questions/PreguntasFrecuentes";
-import SobreNosotrosPage from "./pages/aboutUs/sobreNosotrosPage";
+import SobreNosotrosPage from "./pages/aboutUs/SobreNosotrosPage";
 import Gallery from "./pages/galery/Gallery";
 import Servicios from "./pages/servicios";
 import {
