@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { Shield, X, ChevronLeft, ChevronRight, Search } from "lucide-react";
 

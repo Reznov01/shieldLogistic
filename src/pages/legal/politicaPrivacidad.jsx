@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function politicaPrivacidad() {
+export default function PoliticaPrivacidad() {
   return <div>politicaPrivacidad</div>;
 }
