@@ -11,11 +11,7 @@ function App() {
       <div className="flex flex-col">
         <div className=" bg-gray-100 overflow-x-hidden ">
           <ScrollToTop />
-          {location.pathname !== "/" && (
-            <div className="">
-              <Nav />
-            </div>
-          )}
+          <Nav />
           <AppRoutes />
           <Footer />
         </div>

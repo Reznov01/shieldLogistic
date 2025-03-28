@@ -9,6 +9,7 @@ import TerminosCondiciones from "./pages/legal/TerminosCondiciones";
 import AvisoLegal from "./pages/legal/AvisoLegal";
 import SobreNosotrosPage from "./pages/aboutUs/sobreNosotrosPage";
 import Gallery from "./pages/galery/Gallery";
+import Servicios from "./pages/servicios";
 
 const AppRoutes = () => {
   return (
@@ -19,6 +20,7 @@ const AppRoutes = () => {
       <Route path="/preguntas-frecuentes" element={<PreguntasFrecuentes />} />
       <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
       <Route path="/faq" element={<PreguntasFrecuentes />} />
+      <Route path="/servicios" element={<Servicios />} />
       <Route path="/galeria" element={<Gallery />} />
       <Route path="/sobre-nosotros" element={<SobreNosotrosPage />} />
       <Route path="/terminos-condiciones" element={<TerminosCondiciones />} />

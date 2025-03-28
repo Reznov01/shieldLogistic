@@ -1,13 +1,9 @@
-"use client";
-
-import { useState } from "react";
 import { Menu, X, Shield, Home, Phone, Users, FileText } from "lucide-react";
+import ShieldLogo from "/shieldLogo.webp";
 
-export default function MobileMenu() {
-  const [isOpen, setIsOpen] = useState(false);
-
+export default function MobileMenu({ menuOpen, setMenuOpen }) {
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setMenuOpen(!menuOpen);
   };
 
   const menuLinks = [
@@ -31,49 +27,49 @@ export default function MobileMenu() {
     },
     {
       id: 4,
-      name: "Cotización",
-      href: "/cotizacion",
+      name: "Atencion a Clientes",
+      href: "/atencion-clientes",
       icon: <FileText className="h-5 w-5 mr-3" />,
     },
     {
       id: 5,
-      name: "Contacto",
-      href: "/contacto",
+      name: "Cotizacion",
+      href: "/cotizacion",
       icon: <Phone className="h-5 w-5 mr-3" />,
     },
   ];
 
   return (
     <div className="md:hidden">
-      {/* Hamburger button */}
+      {/* Botón de menú hamburguesa */}
       <button
         onClick={toggleMenu}
-        className="sticky top-4 right-4 z-[1000] p-2 rounded-md bg-blue-600 text-white shadow-lg"
-        aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+        className="sticky top-4 right-4 z-[1000] p-2 rounded-md bg-gray-500 text-gray-800 shadow-lg"
+        aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
       >
-        {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
       </button>
 
-      {/* Mobile menu overlay */}
+      {/* Overlay */}
       <div
         className={`fixed inset-0 bg-black bg-opacity-50 z-[999] transition-opacity duration-300 ${
-          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+          menuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={toggleMenu}
       />
 
-      {/* Mobile menu panel */}
+      {/* Menú móvil */}
       <div
         className={`fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white z-[999] shadow-xl transform transition-transform duration-300 ease-in-out ${
-          isOpen ? "translate-x-0" : "translate-x-full"
+          menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex flex-col h-full">
           <div className="p-6 border-b border-gray-200">
             <div className="flex items-center">
-              <Shield className="h-8 w-8 text-blue-600" />
+              <img src={ShieldLogo} className="h-8 w-8" alt="Shield Logo" />
               <span className="ml-3 text-xl font-bold text-gray-900">
-                Seguridad Privada
+                Shield Logistic
               </span>
             </div>
           </div>
@@ -85,7 +81,7 @@ export default function MobileMenu() {
                   <a
                     href={link.href}
                     className="flex items-center p-3 text-base font-medium text-gray-900 rounded-md hover:bg-gray-100 transition-colors"
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => setMenuOpen(false)}
                   >
                     {link.icon}
                     {link.name}

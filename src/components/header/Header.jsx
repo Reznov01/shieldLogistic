@@ -10,9 +10,9 @@ import { FaFacebook } from "react-icons/fa";
 export default function Header() {
   return (
     <section className="h-screen  flex flex-col transform  relative">
-      <div className="absolute w-screen z-10">
+      {/* <div className="absolute w-screen z-10">
         <Nav />
-      </div>
+      </div> */}
       <div className="flex flex-col lg:flex-row h-full">
         <div className="lg:w-3/5 bg-gray-100 flex lg:flex-col items-center justify-center mt-10 lg:mt-0 mb-5 sm:mb-0">
           <div className="flex flex-col gap-6 mt-15 lg:mx-auto">
