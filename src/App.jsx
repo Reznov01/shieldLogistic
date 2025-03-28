@@ -1,27 +1,26 @@
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./routes";
 import "./App.css";
-import Header from "./components/header/Header";
-import ServicesMin from "./components/servicesmin/ServicesMin";
-import Servicios from "./components/servicios/Servicios";
-import ServiciosSolicitados from "./components/serviciosSolicitados/ServiciosSolicitados";
-import Parallax from "./components/parallax/Parallax";
-import Nosotros from "./components/nosotros/Nosotros";
-import Mision from "./components/nosotros/Mision";
 import Footer from "./components/footer/Footer";
+import ScrollToTop from "./components/scroll-to-top/Scroll";
+import Nav from "./components/nav/Nav";
 
 function App() {
   return (
-    <div className="flex flex-col">
-      <div className=" bg-gray-100 overflow-x-hidden ">
-        <Header />
-        <ServicesMin />
-        <Servicios />
-        <ServiciosSolicitados />
-        <Parallax />
-        <Nosotros />
-        <Mision />
-        <Footer />
+    <BrowserRouter>
+      <div className="flex flex-col">
+        <div className=" bg-gray-100 overflow-x-hidden ">
+          <ScrollToTop />
+          {location.pathname !== "/" && (
+            <div className="">
+              <Nav />
+            </div>
+          )}
+          <AppRoutes />
+          <Footer />
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

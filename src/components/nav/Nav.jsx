@@ -1,22 +1,22 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 export default function Nav() {
   return (
-    <nav className="bg-transparent  z-10">
+    <nav className="bg-transparent  z-10  ">
       <div className="max-w-screen-xl flex flex-wrap h-[70px] sm:h-[90px] items-center justify-between mx-auto p-4 relative">
         <div className="flex items-center 2xl:-ml-20 space-x-3 rtl:space-x-reverse">
-          <a href="#">
+          <Link to="/">
             <img
               src="/shieldLogo.webp"
               className="absolute 2xl:-left-[12%] top-2 w-[100px] h-[80px] lg:h-[80PX] lg:w-[100px]"
               alt="SHIELD Logo"
             />
-          </a>
-          <a href="">
+          </Link>
+          <Link to="/">
             <span className="self-center  text-xl ml-[60%]  sm:text-2xl font-semibold whitespace-nowrap sm:ml-[50%] lg:ml-[60%] 2xl:ml-[10%]">
               SHIELD LOGISTIC
             </span>
-          </a>
+          </Link>
         </div>
         <button
           data-collapse-toggle="navbar-default"
@@ -45,29 +45,35 @@ export default function Nav() {
         <div className="hidden w-full lg:block md:w-auto" id="navbar-default">
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
             <li>
-              <a href="#" className="block py-2 px-3 " aria-current="page">
+              <Link to="/" className="block py-2 px-3 " aria-current="page">
                 Inicio
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="block py-2 px-3 text-gray-900">
+              <Link
+                to="#serviciosSection"
+                className="block py-2 px-3 text-gray-900"
+              >
                 Servicios
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="block py-2 px-3 text-gray-900">
+              <Link to="/postulate" className="block py-2 px-3 text-gray-900">
                 Postulate
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="block py-2 px-3 text-gray-900">
+              <Link
+                to="/atencion-clientes"
+                className="block py-2 px-3 text-gray-900"
+              >
                 Atencion a clientes
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="block py-2 px-3 text-gray-900">
-                Cotizasion
-              </a>
+              <Link to="/cotizacion" className="block py-2 px-3 text-gray-900">
+                Cotizacion
+              </Link>
             </li>
           </ul>
         </div>

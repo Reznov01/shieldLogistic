@@ -7,7 +7,7 @@ import avatar from "../../assets/img/avatar.webp";
 
 export default function Nosotros() {
   return (
-    <section className="w-screen min-h-screen bg-[#f3f4f6] relative flex flex-col">
+    <section className="w-screen min-h-screen bg-[#f3f4f6] relative flex flex-col z-10">
       <img
         src={svg}
         alt="Fondo SVG"

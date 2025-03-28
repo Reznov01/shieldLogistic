@@ -1,8 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import avatar from "../../assets/img/avatar.webp";
 import comando from "../../assets/img/comando.webp";
 import Progreso from "./Progreso";
 import Nav from "../nav/Nav";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 
 export default function Header() {
   return (
@@ -33,20 +36,34 @@ export default function Header() {
               </h3>
             </div>
             <div className=" flex gap-5 ml-5 sm:mb-5 lg:ml-5 mb-0 lg:mx-0">
-              <button
+              <Link
+                to="cotizacion"
                 className="bg-blue-800  sm:w-1/2 rounded-md sm:text-xl cursor-pointer transition-all text-white px-6 py-2 
         border-blue-900 border-b-[6px] hover:brightness-150 hover:-translate-y-[1px] hover:border-b-[6px]
           active:brightness-90 active:translate-y-[2px]"
               >
                 Contáctanos ahora
-              </button>
-              <button
+              </Link>
+              <Link
+                to="galeria"
                 className="bg-green-100  sm:w-1/3 rounded-md sm:text-xl cursor-pointer transition-all text-blue-850 px-6 py-2 border  
         border-blue-200 border-b-[6px] hover:bg-blue-400  hover:-translate-y-[1px] hover:border-b-[6px] hover:border-blue-500
           active:brightness-90 active:translate-y-[2px]"
               >
                 Galeria
-              </button>
+              </Link>
+            </div>
+            <div className="w-fit h-fit flex gap-5 ml-4">
+              <a href="#">
+                <p className="text-3xl sm:text-4xl lg:text-5xl text-[#f00075] transition-all hover:scale-105 hover:-translate-y-2">
+                  <FaInstagram />
+                </p>
+              </a>
+              <a href="#">
+                <p className="text-3xl sm:text-4xl lg:text-5xl text-[#0866ff] transition-all hover:scale-105 hover:-translate-y-2">
+                  <FaFacebook />
+                </p>
+              </a>
             </div>
           </div>
         </div>

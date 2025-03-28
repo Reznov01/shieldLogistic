@@ -9,6 +9,12 @@ import {
   Linkedin,
 } from "lucide-react";
 
+const links = [
+  { name: "Sobre Nosotros", url: "sobre-nosotros" },
+  { name: "Galeria", url: "/galeria" },
+  { name: "Preguntas Frecuentes", url: "/faq" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-slate-900 text-slate-200">
@@ -55,18 +61,22 @@ export default function Footer() {
               Servicios
             </h3>
             <ul className="space-y-2">
-              {["Seguridad Física", "Consultoría de Seguridad"].map(
-                (service, index) => (
-                  <li key={index}>
-                    <a
-                      href="#"
-                      className="text-slate-400 hover:text-blue-300 transition-colors"
-                    >
-                      {service}
-                    </a>
-                  </li>
-                )
-              )}
+              <li>
+                <a
+                  href="cotizacion"
+                  className="text-slate-400 hover:text-blue-300 transition-colors"
+                >
+                  Seguridad Física
+                </a>
+              </li>
+              <li>
+                <a
+                  href="cotizacion"
+                  className="text-slate-400 hover:text-blue-300 transition-colors"
+                >
+                  Consultoría de Seguridad
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -76,18 +86,16 @@ export default function Footer() {
               Enlaces Rápidos
             </h3>
             <ul className="space-y-2">
-              {["Sobre Nosotros", "Nuestro Equipo", "Preguntas Frecuentes"].map(
-                (link, index) => (
-                  <li key={index}>
-                    <a
-                      href="#"
-                      className="text-slate-400 hover:text-blue-300  transition-colors"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                )
-              )}
+              {links.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.url}
+                    className="text-slate-400 hover:text-blue-300 transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 

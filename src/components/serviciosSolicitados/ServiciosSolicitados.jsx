@@ -6,7 +6,10 @@ import Recidencial from "../../assets/img/recidencial.webp";
 
 export default function ServiciosSolicitados() {
   return (
-    <section className="w-screen min-h-[80vh] h-[2100px] sm:h-[1750px] lg:h-[1950px] xl:h-[1100px] 2xl:h-[1100px] flex flex-col items-center relative  mb-40 lg:mb-0">
+    <section
+      className="w-screen min-h-[80vh] h-[2100px] sm:h-[1750px] lg:h-[1950px] xl:h-[1100px] 2xl:h-[1100px] flex flex-col items-center relative  mb-40 lg:mb-0 "
+      id="serviciosSection"
+    >
       <div className="w-full lg:h-2/4 h-2/7 bg-gray-900 flex flex-col items-center relative">
         <h3 className="text-3xl md:text-5xl text-blue-200 mt-10 text-center">
           Servicios más solicitados
