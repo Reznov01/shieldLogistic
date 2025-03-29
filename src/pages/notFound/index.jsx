@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "react-router-dom";
 import { Shield, AlertTriangle, Home } from "lucide-react";
 
 export default function NotFound() {
