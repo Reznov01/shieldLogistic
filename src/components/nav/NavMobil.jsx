@@ -22,7 +22,7 @@ export default function NavMobil({ menuOpen, setMenuOpen }) {
     {
       id: 3,
       name: "Nosotros",
-      href: "/nosotros",
+      href: "/sobre-nosotros",
       icon: <Users className="h-5 w-5 mr-3" />,
     },
     {
