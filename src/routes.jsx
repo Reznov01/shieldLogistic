@@ -11,7 +11,7 @@ import {
   PoliticaPrivacidad,
   TerminosCondiciones,
   AvisoLegal,
-} from "./pages/legal/";
+} from "./pages/legal";
 
 const AppRoutes = () => {
   return (
