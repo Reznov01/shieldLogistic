@@ -10,7 +10,6 @@ export default function Inicio() {
   return (
     <div className="flex flex-col">
       <div className=" bg-gray-100 overflow-x-hidden ">
-        {/* <ScrollToTop />           */}
         <Header />
         <ServicesMin />
         <Servicios />
@@ -18,7 +17,6 @@ export default function Inicio() {
         <Parallax />
         <Nosotros />
         <Mision />
-        {/* <Footer /> */}
       </div>
     </div>
   );

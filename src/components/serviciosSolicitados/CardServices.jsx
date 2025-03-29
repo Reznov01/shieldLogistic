@@ -1,4 +1,5 @@
 import { TbShieldStar } from "react-icons/tb";
+import { Link } from "react-router-dom";
 export default function CardServices({
   title,
   subTitle,
@@ -56,13 +57,14 @@ export default function CardServices({
           </div>
         </div>
         <div className="card-actions w-full p-3">
-          <button
-            className="bg-blue-500  w-full rounded-md text-xl cursor-pointer transition-all text-white px-6 py-2 
+          <Link
+            to="/cotizacion"
+            className="bg-blue-500 text-center block w-full rounded-md text-xl cursor-pointer transition-all text-white px-6 py-2 
         border-blue-600 border-b-[6px] hover:brightness-150 hover:-translate-y-[1px] hover:border-b-[6px]
           active:brightness-90 active:translate-y-[2px]"
           >
             Solicitar informacion
-          </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import shieldVideo from "../../assets/video/shieldVideo.mp4";
+import { Link } from "react-router-dom";
 export default function Mision() {
   return (
     <section className="w-screen min-h-screen flex flex-col bg-[#f3f4f6] relative">
@@ -19,9 +20,12 @@ export default function Mision() {
               altamente cualificados, dedicados a superar las expectativas en
               cada proyecto que emprendemos.
             </p>
-            <button className="bg-gray-500 p-4 text-lg rounded-md cursor-pointer transition-colors text-white border-b-gray-600 border-b-3 hover:bg-gray-600">
+            <Link
+              to="/galeria"
+              className="bg-gray-500  p-4 text-lg rounded-md cursor-pointer transition-colors text-white border-b-gray-600 border-b-3 hover:bg-gray-600"
+            >
               Conoce a nuestro equipo
-            </button>
+            </Link>
           </div>
         </div>
         <div className="lg:w-1/2 sm:mt-10 ">

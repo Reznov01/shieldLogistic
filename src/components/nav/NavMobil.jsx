@@ -40,11 +40,11 @@ export default function NavMobil({ menuOpen, setMenuOpen }) {
   ];
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       {/* Botón de menú hamburguesa */}
       <button
         onClick={toggleMenu}
-        className="sticky top-4 right-4 z-[1000] p-2 rounded-md bg-gray-500 text-gray-800 shadow-lg"
+        className="sticky top-4 right-4 z-[1000] p-2 rounded-md bg-gray-300 text-gray-800 shadow-lg"
         aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
       >
         {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

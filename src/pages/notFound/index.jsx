@@ -4,7 +4,7 @@ import { Shield, AlertTriangle, Home } from "lucide-react";
 
 export default function () {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800 px-4 z-10">
       <div className="max-w-md w-full text-center">
         <div className="flex justify-center mb-6">
           <div className="relative">
@@ -15,7 +15,7 @@ export default function () {
 
         <h1 className="text-6xl font-bold text-white mb-4">404</h1>
         <h2 className="text-2xl font-semibold text-blue-400 mb-6">
-          Área Restringida
+          Pagina no encontrada
         </h2>
 
         <p className="text-gray-300 mb-8">
@@ -25,8 +25,8 @@ export default function () {
 
         <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 mb-8">
           <p className="text-gray-400 text-sm">
-            Esta área está bajo vigilancia. Todas las actividades son
-            monitoreadas y registradas para su seguridad.
+            Estamos trabajando para mejorar tu experiencia. Si necesitas ayuda,
+            no dudes en contactarnos.
           </p>
         </div>
 

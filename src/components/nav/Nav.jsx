@@ -1,11 +1,32 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import MobileMenu from "./NavMobil";
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [locationNotFound, setLocationNotFound] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
+    const knownRoutes = [
+      "/",
+      "/servicios",
+      "/postulate",
+      "/sobre-nosotros",
+      "/atencion-clientes",
+      "/cotizacion",
+      "/galeria",
+      "/politica",
+      "/terminos",
+      "/aviso",
+    ];
+
+    if (!knownRoutes.includes(location.pathname)) {
+      setLocationNotFound(true);
+    } else {
+      setLocationNotFound(false);
+    }
+
     if (menuOpen) {
       document.body.style.overflow = "hidden";
       document.body.style.position = "fixed"; // Evita el desplazamiento
@@ -14,10 +35,14 @@ export default function Nav() {
       document.body.style.overflow = "auto";
       document.body.style.position = "static";
     }
-  }, [menuOpen]);
+  }, [location.pathname, menuOpen]);
 
   return (
-    <nav className="bg-transparent  absolute w-screen z-50">
+    <nav
+      className={`bg-transparent  absolute w-screen z-50 ${
+        locationNotFound ? "hidden" : "block"
+      } `}
+    >
       <div className="max-w-screen-xl flex flex-wrap h-[70px] sm:h-[90px] items-center justify-between mx-auto p-4 relative">
         <div className="flex items-center 2xl:-ml-20 space-x-3 rtl:space-x-reverse">
           <Link to="/">

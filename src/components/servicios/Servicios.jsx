@@ -1,3 +1,4 @@
+import { Link, Links } from "react-router-dom";
 import serviciosLayer from "../../assets/layers/SectionLayer.svg";
 import { TbShieldStar } from "react-icons/tb";
 import servicios from "../../assets/img/lobi.webp";
@@ -45,21 +46,27 @@ export default function Servicios() {
                 </div>
               ))}
             </div>
-            <button className="cursor-pointer transition-all bg-blue-500 text-white px-6 py-2 rounded-lg border-blue-600 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px] mt-5 lg:mt-10 w-full  text-lg hidden lg:block">
+            <Link
+              to="cotizacion"
+              className="cursor-pointer text-center  transition-all bg-blue-500 text-white px-6 py-2 rounded-lg border-blue-600 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px] mt-5 lg:mt-10 w-full  text-lg hidden lg:block"
+            >
               Cotiza tu Servicio
-            </button>
+            </Link>
           </div>
-          <div className="w-full lg:w-2/5 lg:h-full  p-2 ">
+          <div className="w-full lg:w-2/5 lg:h-full  ">
             <img
               src={servicios}
               alt="Servicios de seguridad"
               className="rounded-lg shadow-lg h-[300px] lg:h-[680px] 2xl:h-[580px]  object-cover w-full"
             />
-          </div>
-          <div className="w-full block lg:hidden  px-2 ">
-            <button className="cursor-pointer transition-all bg-blue-500 text-white  py-2 rounded-lg border-blue-600 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px] my-5  w-full   text-lg  ">
-              Cotiza tu Servicio
-            </button>
+            <div className="w-full  block lg:hidden  px-2 ">
+              <Link
+                to="/cotizacion"
+                className="cursor-pointer text-center block  transition-all bg-blue-500 text-white  py-2 rounded-lg border-blue-600 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px] my-10  w-full   text-lg  "
+              >
+                Cotiza tu Servicio
+              </Link>
+            </div>
           </div>
         </div>
       </div>

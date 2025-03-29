@@ -17,8 +17,8 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-200">
-      <div className="container mx-auto px-4 py-12">
+    <footer className="bg-slate-900 text-slate-200 z-50">
+      <div className="container mx-auto px-4 py-12 z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
@@ -148,9 +148,9 @@ export default function Footer() {
           <p className="text-sm text-slate-500">
             &copy; {new Date().getFullYear()} SHIELD LOGISTIC.
           </p>
-          <p className="text-blue-300">
+          <p className="text-cyan-300 mt-3">
             Pagina desarollada con ☕ por{" "}
-            <span className="text-blue-200 hover:text-amber-300 cursor-pointer transition-colors">
+            <span className="text-amber-300 md:text-blue-200 hover:text-amber-300 cursor-pointer transition-colors">
               <a href="https://conseportafolio.netlify.app/" target="_blank">
                 ConseLab
               </a>

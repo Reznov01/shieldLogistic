@@ -4,13 +4,15 @@ import "./App.css";
 import Footer from "./components/footer/Footer";
 import ScrollToTop from "./components/scroll-to-top/Scroll";
 import Nav from "./components/nav/Nav";
+import ScrollToTopPages from "./components/scrollToTopPages";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="flex flex-col">
-        <div className=" bg-gray-100 overflow-x-hidden ">
+        <div className=" bg-[#f9fafb] overflow-x-hidden ">
           <ScrollToTop />
+          <ScrollToTopPages />
           <Nav />
           <AppRoutes />
           <Footer />

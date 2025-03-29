@@ -8,11 +8,6 @@ import SobreNosotrosPage from "./pages/aboutUs/SobreNosotrosPage";
 import Gallery from "./pages/galery/Gallery";
 import Servicios from "./pages/servicios";
 import NotFound from "./pages/notFound";
-// import {
-//   PoliticaPrivacidad,
-//   TerminosCondiciones,
-//   AvisoLegal,
-// } from "./pages/legal";
 
 const AppRoutes = () => {
   return (
@@ -27,9 +22,6 @@ const AppRoutes = () => {
       <Route path="/galeria" element={<Gallery />} />
       <Route path="/sobre-nosotros" element={<SobreNosotrosPage />} />
       <Route path="/cotizacion" element={<Cotizacion />} />
-      {/* <Route path="/terminos-condiciones" element={<TerminosCondiciones />} />
-      <Route path="/aviso-legal" element={<AvisoLegal />} />
-      <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} /> */}
     </Routes>
   );
 };

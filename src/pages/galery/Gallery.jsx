@@ -17,7 +17,7 @@ export default function GallerySection() {
         "Sesión de entrenamiento especializado para nuestro equipo de seguridad.",
       category: "capacitacion",
       date: "Enero 2023",
-      url: "/placeholder.svg?height=600&width=800",
+      url: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       featured: true,
     },
     {
@@ -27,7 +27,7 @@ export default function GallerySection() {
         "Incorporación de vehículos equipados con la última tecnología.",
       category: "equipamiento",
       date: "Febrero 2023",
-      url: "/placeholder.svg?height=600&width=800",
+      url: "https://images.unsplash.com/photo-1672644114747-123a7d168d41?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       featured: true,
     },
     {
@@ -37,7 +37,7 @@ export default function GallerySection() {
         "Nuestro equipo brindando seguridad en el evento corporativo más importante del año.",
       category: "eventos",
       date: "Marzo 2023",
-      url: "/placeholder.svg?height=600&width=800",
+      url: "https://images.unsplash.com/photo-1584445584400-1a7cc5de77ae?q=80&w=1960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       featured: false,
     },
     {
@@ -47,7 +47,7 @@ export default function GallerySection() {
         "Recibiendo la certificación internacional que avala nuestros procesos de calidad.",
       category: "reconocimientos",
       date: "Abril 2023",
-      url: "/placeholder.svg?height=600&width=800",
+      url: "https://plus.unsplash.com/premium_photo-1714138490052-65c64d8db2e0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       featured: true,
     },
     {
@@ -57,7 +57,7 @@ export default function GallerySection() {
         "Nuestro equipo de limpieza en acción en las oficinas de un cliente importante.",
       category: "servicios",
       date: "Mayo 2023",
-      url: "/placeholder.svg?height=600&width=800",
+      url: "https://source.unsplash.com/800x600/?cleaning,office",
       featured: false,
     },
     {
