@@ -1,7 +1,7 @@
 import Link from "react-router-dom";
 import { Shield, AlertTriangle, Home } from "lucide-react";
 
-export default function NotFound() {
+export default function () {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800 px-4">
       <div className="max-w-md w-full text-center">
