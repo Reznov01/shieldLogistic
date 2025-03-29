@@ -7,6 +7,7 @@ import PreguntasFrecuentes from "./pages/questions/PreguntasFrecuentes";
 import SobreNosotrosPage from "./pages/aboutUs/SobreNosotrosPage";
 import Gallery from "./pages/galery/Gallery";
 import Servicios from "./pages/servicios";
+import NotFound from "./pages/notFound";
 // import {
 //   PoliticaPrivacidad,
 //   TerminosCondiciones,
@@ -16,6 +17,7 @@ import Servicios from "./pages/servicios";
 const AppRoutes = () => {
   return (
     <Routes>
+      <Route path="*" element={<NotFound />} />
       <Route path="/" element={<Inicio />} />
       <Route path="/postulate" element={<Postulate />} />
       <Route path="/atencion-clientes" element={<AtencionClientes />} />
