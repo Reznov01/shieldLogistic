@@ -1,4 +1,5 @@
-import Link from "react-router-dom";
+import { Link } from "react-router-dom";
+
 import { Shield, AlertTriangle, Home } from "lucide-react";
 
 export default function () {
@@ -30,7 +31,7 @@ export default function () {
         </div>
 
         <Link
-          href="/"
+          to="/"
           className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300"
         >
           <Home className="h-5 w-5" />
