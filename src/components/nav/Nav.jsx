@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import MobileMenu from "../../components/mobileMenu";
+import MobileMenu from "./NavMobil";
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);

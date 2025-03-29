@@ -1,7 +1,7 @@
 import { Menu, X, Shield, Home, Phone, Users, FileText } from "lucide-react";
 import ShieldLogo from "/shieldLogo.webp";
 
-export default function ({ menuOpen, setMenuOpen }) {
+export default function NavMobil({ menuOpen, setMenuOpen }) {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
