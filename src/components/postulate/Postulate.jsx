@@ -1,11 +1,11 @@
 import ApplicationForm from "./AppicationForm";
-
+import postulate from "../../assets/img/postulate.jpg";
 export default function Home() {
   return (
-    <div className="flex flex-col w-screen min-h-screen ">
+    <div className="flex flex-col w-screen min-h-screen my-20">
       <main className="flex-1 mx-auto ">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
+        <section className="w-full py-12 md:py-24 lg:py-22 bg-gray-100">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 ">
               <div className="space-y-4 xl:mt-20">
@@ -35,11 +35,11 @@ export default function Home() {
               </div>
               <div className="mx-auto lg:ml-auto">
                 <img
-                  src="/src/assets/img/hotel.webp"
+                  src={postulate}
                   alt="Equipo de seguridad profesional"
                   width={600}
                   height={400}
-                  className="rounded-lg object-cover"
+                  className="rounded-lg object-cover h-[600px]"
                 />
               </div>
             </div>
