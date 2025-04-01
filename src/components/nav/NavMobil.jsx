@@ -1,4 +1,13 @@
-import { Menu, X, Shield, Home, Phone, Users, FileText } from "lucide-react";
+import {
+  Menu,
+  X,
+  Shield,
+  Home,
+  Phone,
+  Users,
+  FileText,
+  LandPlot,
+} from "lucide-react";
 import ShieldLogo from "/shieldLogo.webp";
 
 export default function NavMobil({ menuOpen, setMenuOpen }) {
@@ -21,18 +30,24 @@ export default function NavMobil({ menuOpen, setMenuOpen }) {
     },
     {
       id: 3,
+      name: "Postulate",
+      href: "/postulate",
+      icon: <LandPlot className="h-5 w-5 mr-3" />,
+    },
+    {
+      id: 4,
       name: "Nosotros",
       href: "/sobre-nosotros",
       icon: <Users className="h-5 w-5 mr-3" />,
     },
     {
-      id: 4,
+      id: 5,
       name: "Atencion a Clientes",
       href: "/atencion-clientes",
       icon: <FileText className="h-5 w-5 mr-3" />,
     },
     {
-      id: 5,
+      id: 6,
       name: "Cotizacion",
       href: "/cotizacion",
       icon: <Phone className="h-5 w-5 mr-3" />,

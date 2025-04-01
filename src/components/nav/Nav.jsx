@@ -48,12 +48,12 @@ export default function Nav() {
           <Link to="/">
             <img
               src="/shieldLogo.webp"
-              className="absolute 2xl:-left-[12%] top-2 w-[100px] h-[80px] lg:h-[80px] lg:w-[100px]"
+              className="absolute  3xl:-left-[12%] 2xl:-left-[5%] xl:-left-[12%] top-2 w-[100px] h-[80px] lg:h-[80px] lg:w-[100px]"
               alt="SHIELD Logo"
             />
           </Link>
           <Link to="/">
-            <span className="self-center text-xl ml-[60%] sm:text-2xl font-semibold whitespace-nowrap sm:ml-[50%] lg:ml-[60%] 2xl:ml-[10%]">
+            <span className="self-center text-xl ml-[60%] sm:text-2xl font-semibold whitespace-nowrap sm:ml-[50%] lg:ml-[60%] 3xl:ml-[10%] 2xl:ml-[50%] xl:ml-[10%]">
               SHIELD LOGISTIC
             </span>
           </Link>
