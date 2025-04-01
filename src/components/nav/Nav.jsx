@@ -19,6 +19,7 @@ export default function Nav() {
       "/politica",
       "/terminos",
       "/aviso",
+      "/faq",
     ];
 
     if (!knownRoutes.includes(location.pathname)) {

@@ -7,6 +7,8 @@ import {
   Users,
   FileText,
   LandPlot,
+  ShieldQuestion,
+  Images,
 } from "lucide-react";
 import ShieldLogo from "/shieldLogo.webp";
 
@@ -42,12 +44,24 @@ export default function NavMobil({ menuOpen, setMenuOpen }) {
     },
     {
       id: 5,
+      name: "Galeria",
+      href: "/galeria",
+      icon: <Images className="h-5 w-5 mr-3" />,
+    },
+    {
+      id: 6,
+      name: "Preguntas Frecuentes",
+      href: "/faq",
+      icon: <ShieldQuestion className="h-5 w-5 mr-3" />,
+    },
+    {
+      id: 7,
       name: "Atencion a Clientes",
       href: "/atencion-clientes",
       icon: <FileText className="h-5 w-5 mr-3" />,
     },
     {
-      id: 6,
+      id: 8,
       name: "Cotizacion",
       href: "/cotizacion",
       icon: <Phone className="h-5 w-5 mr-3" />,
