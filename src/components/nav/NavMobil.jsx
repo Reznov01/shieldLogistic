@@ -11,6 +11,7 @@ import {
   Images,
 } from "lucide-react";
 import ShieldLogo from "/shieldLogo.webp";
+import { motion } from "framer-motion"; // Importa motion
 
 export default function NavMobil({ menuOpen, setMenuOpen }) {
   const toggleMenu = () => {
@@ -68,6 +69,24 @@ export default function NavMobil({ menuOpen, setMenuOpen }) {
     },
   ];
 
+  const listVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1, // Retraso de 2 ms entre los elementos
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { x: "100vh" }, // Comienza desplazado a la derecha
+    show: {
+      x: 0, // Se mueve a su posición original
+      transition: { duration: 0.2 }, // Duración de la animación
+    },
+  };
+
   return (
     <div className="lg:hidden">
       {/* Botón de menú hamburguesa */}
@@ -103,10 +122,16 @@ export default function NavMobil({ menuOpen, setMenuOpen }) {
             </div>
           </div>
 
-          <nav className="flex-1 overflow-y-auto p-4">
-            <ul className="space-y-2">
+          <motion.nav
+            className="flex-1 overflow-y-auto p-4"
+            variants={listVariants}
+            initial="hidden"
+            animate="show"
+            key={menuOpen ? "open" : "closed"} // Cambiar la key para reiniciar la animación cada vez que el menú se abre o cierra
+          >
+            <motion.ul className="space-y-2">
               {menuLinks.map((link) => (
-                <li key={link.id}>
+                <motion.li key={link.id} variants={itemVariants}>
                   <a
                     href={link.href}
                     className="flex items-center p-3 text-base font-medium text-gray-900 rounded-md hover:bg-gray-100 transition-colors"
@@ -115,10 +140,10 @@ export default function NavMobil({ menuOpen, setMenuOpen }) {
                     {link.icon}
                     {link.name}
                   </a>
-                </li>
+                </motion.li>
               ))}
-            </ul>
-          </nav>
+            </motion.ul>
+          </motion.nav>
 
           <div className="p-6 border-t border-gray-200">
             <a
