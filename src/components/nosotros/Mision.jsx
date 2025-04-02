@@ -1,8 +1,9 @@
 import shieldVideo from "../../assets/video/shieldVideo.mp4";
 import { Link } from "react-router-dom";
+import { motion } from "motion/react";
 export default function Mision() {
   return (
-    <section className="w-screen min-h-screen flex flex-col bg-[#f3f4f6] relative">
+    <section className="w-screen min-h-screen flex flex-col bg-[#f3f4f6] relative overflow-hidden">
       <div className="mx-auto w-[90%] sm:w-[95%] 2xl:w-[80%]  flex flex-col lg:flex-row h-1/2 p-5 sm:p-10">
         <div className="lg:w-1/2 mb-6 sm:mb-0">
           <div className="pt-8">
@@ -53,7 +54,13 @@ export default function Mision() {
       </div>
 
       <div className="w-[90%] sm:w-[95%] 2xl:w-[80%]  mx-auto flex flex-col sm:flex-row gap-10 p-5 sm:p-10 flex-wrap lg:flex-nowrap">
-        <div className="w-full  lg:w-1/3">
+        <motion.div
+          className="w-full  lg:w-1/3"
+          initial={{ opacity: 0, translateY: 100 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
           <div className="p-10 bg-gray-900 text-blue-50 border shadow-lg rounded-lg min-h-[320px]">
             <p className="text-2xl font-bold text-amber-300">Nuestra Misíon</p>
             <p className="mt-3">
@@ -62,8 +69,14 @@ export default function Mision() {
               estándares de calidad y servicio.
             </p>
           </div>
-        </div>
-        <div className="w-full lg:w-1/3">
+        </motion.div>
+        <motion.div
+          className="w-full lg:w-1/3"
+          initial={{ opacity: 0, translateY: 100 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          viewport={{ once: true }}
+        >
           <div className="p-10 bg-gray-900 text-blue-50 border shadow-lg rounded-lg min-h-[320px]">
             <p className="text-2xl font-bold text-amber-300">Nuestra Visión</p>
             <p className="mt-3">
@@ -72,8 +85,14 @@ export default function Mision() {
               con la satisfacción del cliente.
             </p>
           </div>
-        </div>
-        <div className="w-full lg:w-1/3">
+        </motion.div>
+        <motion.div
+          className="w-full lg:w-1/3"
+          initial={{ opacity: 0, translateY: 100 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <div className="p-10 bg-gray-900 text-blue-50 border shadow-lg rounded-lg min-h-[320px]">
             <p className="text-2xl font-bold text-amber-300">
               Nuestros Valores
@@ -84,7 +103,7 @@ export default function Mision() {
               acciones decisiones.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

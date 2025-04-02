@@ -1,6 +1,6 @@
 export default function CardUniforme({ image, title, description }) {
   return (
-    <div className="max-w-sm w-full bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+    <div className="max-w-sm w-full bg-gray-100 rounded-lg shadow-lg overflow-hidden min-h-[530px]">
       <div className="w-full h-[350px]">
         <img
           src={image}

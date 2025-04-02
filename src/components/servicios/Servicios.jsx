@@ -1,4 +1,5 @@
-import { Link, Links } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { motion } from "motion/react";
 import serviciosLayer from "../../assets/layers/SectionLayer.svg";
 import { TbShieldStar } from "react-icons/tb";
 import servicios from "../../assets/img/lobi.webp";
@@ -42,7 +43,15 @@ export default function Servicios() {
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <TbShieldStar className="text-4xl text-blue-700" />
-                  <p className="sm:text-lg">{item}</p>
+                  <motion.p
+                    className="sm:text-lg"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }} // Evita que se repita la animación
+                  >
+                    {item}
+                  </motion.p>
                 </div>
               ))}
             </div>

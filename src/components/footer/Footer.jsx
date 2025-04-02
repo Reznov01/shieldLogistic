@@ -3,11 +3,15 @@ import {
   Phone,
   Mail,
   MapPin,
+  Users,
+  ShieldQuestion,
+  Images,
   Facebook,
   Twitter,
   Instagram,
   Linkedin,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const links = [
   { name: "Sobre Nosotros", url: "sobre-nosotros" },
@@ -60,13 +64,16 @@ export default function Footer() {
             <h3 className="text-lg font-semibold border-b border-slate-700 pb-2">
               Servicios
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-4">
               <li>
                 <a
                   href="cotizacion"
                   className="text-slate-400 hover:text-blue-300 transition-colors"
                 >
-                  Seguridad Física
+                  <div className="flex gap-2">
+                    <Shield />
+                    Seguridad Física
+                  </div>
                 </a>
               </li>
               <li>
@@ -74,7 +81,10 @@ export default function Footer() {
                   href="cotizacion"
                   className="text-slate-400 hover:text-blue-300 transition-colors"
                 >
-                  Consultoría de Seguridad
+                  <div className="flex gap-2">
+                    <Shield />
+                    Consultoría de Seguridad
+                  </div>
                 </a>
               </li>
             </ul>
@@ -85,17 +95,41 @@ export default function Footer() {
             <h3 className="text-lg font-semibold border-b border-slate-700 pb-2">
               Enlaces Rápidos
             </h3>
-            <ul className="space-y-2">
-              {links.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.url}
-                    className="text-slate-400 hover:text-blue-300 transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
+            <ul className="space-y-4">
+              <li>
+                <Link
+                  to={"sobre-nosotros"}
+                  className="text-slate-400 hover:text-blue-300 transition-colors"
+                >
+                  <div className="flex gap-2">
+                    <Users />
+                    Sobre Nosotros
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={"galeria"}
+                  className="text-slate-400 hover:text-blue-300 transition-colors"
+                >
+                  <div className="flex gap-2">
+                    {" "}
+                    <Images />
+                    Galeria
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={"faq"}
+                  className="text-slate-400 hover:text-blue-300 transition-colors"
+                >
+                  <div className="flex gap-2">
+                    <ShieldQuestion />
+                    Preguntas Frecuentes
+                  </div>
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -104,7 +138,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold border-b border-slate-700 pb-2">
               Contacto
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {/* Dirección - Abre Google Maps */}
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
@@ -148,7 +182,7 @@ export default function Footer() {
           <p className="text-sm text-slate-500">
             &copy; {new Date().getFullYear()} SHIELD LOGISTIC.
           </p>
-          <p className="text-cyan-300 mt-3">
+          <p className="text-xs text-cyan-300 mt-3">
             Pagina desarollada con ☕ por{" "}
             <span className="text-amber-300 md:text-blue-200 hover:text-amber-300 cursor-pointer transition-colors">
               <a href="https://conseportafolio.netlify.app/" target="_blank">
