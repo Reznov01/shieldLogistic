@@ -1,14 +1,20 @@
 import ApplicationForm from "./AppicationForm";
 import postulate from "../../assets/img/postulate.jpg";
+import { motion } from "motion/react";
+
 export default function Home() {
   return (
     <div className="flex flex-col w-screen min-h-screen my-25">
       <main className="flex-1 mx-auto ">
-        {/* Hero Section */}
         <section className="w-full py-12 md:py-24 lg:py-22 bg-gray-50 2xl:px-28">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 ">
-              <div className="space-y-4 xl:mt-20">
+              <motion.div
+                className="space-y-4 xl:mt-20"
+                initial={{ translateX: "-100vh" }}
+                animate={{ translateX: 0 }}
+                transition={{ duration: 0.5 }}
+              >
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:mb-10">
                   Únete a Nuestro Equipo de Seguridad Profesional
                 </h1>
@@ -32,8 +38,13 @@ export default function Home() {
                     Aplicar Ahora
                   </a>
                 </div>
-              </div>
-              <div className="mx-auto lg:ml-auto">
+              </motion.div>
+              <motion.div
+                className="mx-auto lg:ml-auto"
+                initial={{ translateX: "100vh" }}
+                animate={{ translateX: 0 }}
+                transition={{ duration: 0.5 }}
+              >
                 <img
                   src={postulate}
                   alt="Equipo de seguridad profesional"
@@ -41,7 +52,7 @@ export default function Home() {
                   height={400}
                   className="rounded-lg object-cover h-[600px]"
                 />
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -60,7 +71,14 @@ export default function Home() {
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3">
               {benefits.map((benefit, index) => (
-                <div key={index} className="border rounded-lg p-6 shadow-md">
+                <motion.div
+                  key={index}
+                  className="border rounded-lg p-6 shadow-md min-h-[220px]"
+                  initial={{ translateY: "100px", opacity: 0 }}
+                  whileInView={{ opacity: 1, translateY: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  viewport={{ once: true }}
+                >
                   <div className="mb-4 text-blue-600 text-4xl">
                     {benefit.icon}
                   </div>
@@ -68,7 +86,7 @@ export default function Home() {
                   <p className="text-gray-800 xl:text-lg">
                     {benefit.description}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -91,9 +109,13 @@ export default function Home() {
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {positions.map((position, index) => (
-                <div
+                <motion.div
                   key={index}
                   className="flex flex-col h-full border p-6 rounded-lg shadow-md"
+                  initial={{ translateY: "100px", opacity: 0 }}
+                  whileInView={{ opacity: 1, translateY: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  viewport={{ once: true }}
                 >
                   <div className="mb-4">
                     <h3 className="text-xl font-bold">{position.title}</h3>
@@ -118,7 +140,7 @@ export default function Home() {
                       Chatea con nosotros
                     </a>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -136,9 +158,15 @@ export default function Home() {
                 aplicación.
               </p>
             </div>
-            <div className="mx-auto max-w-3xl">
+            <motion.div
+              className="mx-auto max-w-3xl"
+              initial={{ translateY: "100px", opacity: 0 }}
+              whileInView={{ opacity: 1, translateY: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
               <ApplicationForm positions={positions.map((p) => p.title)} />
-            </div>
+            </motion.div>
           </div>
         </section>
       </main>
