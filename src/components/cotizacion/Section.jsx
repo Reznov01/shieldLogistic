@@ -1,6 +1,6 @@
-"use client";
 import ShieldLogo from "/shieldLogo.webp";
 import { useState } from "react";
+import { motion } from "motion/react";
 import {
   CheckCircle,
   Clock,
@@ -144,13 +144,6 @@ export default function Section() {
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="flex justify-center mb-4">
-            <img
-              src={ShieldLogo}
-              alt="Logo de shield logistic"
-              className="h-35 w-35"
-            />
-          </div>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Solicite una Cotización
           </h1>
@@ -167,10 +160,13 @@ export default function Section() {
             Nuestros Servicios
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-5 gap-6 w-full ">
-            {services.map((service) => (
-              <div
+            {services.map((service, index) => (
+              <motion.div
                 key={service.id}
                 className="bg-gray-900 rounded-lg shadow-md overflow-hidden xl:w-[350px]  "
+                initial={{ translateY: "200px", opacity: 0 }}
+                animate={{ opacity: 1, translateY: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
               >
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-amber-300 mb-3">
@@ -186,12 +182,12 @@ export default function Section() {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mb-16 ">
           {/* Quote Form */}
           <div className="lg:col-span-3">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">

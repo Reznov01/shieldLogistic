@@ -41,13 +41,16 @@ export default function Servicios() {
                 "Capacitación constante para el personal",
                 "Reacción ante amenazas de incendio",
               ].map((item, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <TbShieldStar className="text-4xl text-blue-700" />
+                <div
+                  key={index}
+                  className="flex items-center gap-3 overflow-hidden"
+                >
+                  <TbShieldStar className="text-4xl text-blue-700 z-20" />
                   <motion.p
-                    className="sm:text-lg"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.5 }}
+                    className="sm:text-lg z-10"
+                    initial={{ opacity: 0, translateX: "-90%" }}
+                    whileInView={{ opacity: 1, translateX: "0%" }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }} // Evita que se repita la animación
                   >
                     {item}

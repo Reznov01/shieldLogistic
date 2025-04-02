@@ -76,7 +76,7 @@ export default function Home() {
                   className="border rounded-lg p-6 shadow-md min-h-[220px]"
                   initial={{ translateY: "100px", opacity: 0 }}
                   whileInView={{ opacity: 1, translateY: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
+                  transition={{ duration: 0.5, delay: index * 0.7 }}
                   viewport={{ once: true }}
                 >
                   <div className="mb-4 text-blue-600 text-4xl">

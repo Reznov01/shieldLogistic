@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Shield, X, ChevronLeft, ChevronRight, Search } from "lucide-react";
+import { motion } from "motion/react";
 
 export default function GallerySection() {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -210,9 +211,6 @@ export default function GallerySection() {
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="flex justify-center mb-4">
-            <Shield className="h-16 w-16 text-blue-700" />
-          </div>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Galería de Imágenes {new Date().getFullYear()}
           </h1>
@@ -232,10 +230,14 @@ export default function GallerySection() {
             {galleryImages
               .filter((img) => img.featured)
               .map((image, index) => (
-                <div
+                <motion.div
                   key={image.id}
                   className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
                   onClick={() => openImage(image, galleryImages.indexOf(image))}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  viewport={{ once: true }}
                 >
                   <div className="relative h-64">
                     <img
@@ -254,7 +256,7 @@ export default function GallerySection() {
                     <p className="text-sm text-gray-500 mb-2">{image.date}</p>
                     <p className="text-gray-700">{image.description}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
           </div>
         </div>

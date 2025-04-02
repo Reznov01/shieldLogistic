@@ -1,6 +1,5 @@
-"use client";
-
 import { useState } from "react";
+import { motion } from "motion/react";
 import {
   Shield,
   Phone,
@@ -72,9 +71,6 @@ export default function Section() {
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="flex justify-center mb-4">
-            <Shield className="h-16 w-16 text-blue-700" />
-          </div>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Atención al Cliente
           </h1>
@@ -92,7 +88,12 @@ export default function Section() {
               Información de Contacto
             </h2>
 
-            <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+            <motion.div
+              className="bg-white rounded-lg shadow-md p-6 mb-8"
+              initial={{ translateX: "-100vh" }}
+              animate={{ translateX: 0 }}
+              transition={{ duration: 0.5 }}
+            >
               <div className="flex items-start mb-6">
                 <Phone className="h-6 w-6 text-blue-700 mt-1 mr-4" />
                 <div>
@@ -140,14 +141,19 @@ export default function Section() {
                   <p className="text-gray-700">Ciudad de México, CP 03100</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* FAQ Section */}
             <div>
               <h2 className="text-2xl font-semibold text-gray-800 mb-6">
                 Preguntas Frecuentes
               </h2>
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <motion.div
+                className="bg-white rounded-lg shadow-md overflow-hidden"
+                initial={{ translateX: "-100vh" }}
+                animate={{ translateX: 0 }}
+                transition={{ duration: 0.5 }}
+              >
                 {faqItems.map((item, index) => (
                   <div
                     key={index}
@@ -175,7 +181,7 @@ export default function Section() {
                     </div>
                   </div>
                 ))}
-              </div>
+              </motion.div>
             </div>
           </div>
 
@@ -184,7 +190,12 @@ export default function Section() {
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">
               Envíenos un Mensaje
             </h2>
-            <div className="bg-white rounded-lg shadow-md p-6">
+            <motion.div
+              className="bg-white rounded-lg shadow-md p-6"
+              initial={{ translateX: "100vh" }}
+              animate={{ translateX: 0 }}
+              transition={{ duration: 0.5 }}
+            >
               <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
@@ -296,19 +307,24 @@ export default function Section() {
                   </button>
                 </div>
               </form>
-            </div>
+            </motion.div>
           </div>
         </div>
 
         {/* Emergency Contact Banner */}
-        <div className="mt-16 bg-blue-700 text-white rounded-lg shadow-md p-6 text-center">
+        <motion.div
+          className="mt-16 bg-blue-700 text-white rounded-lg shadow-md p-6 text-center"
+          initial={{ translateY: "100px" }}
+          whileInView={{ translateY: 0 }}
+          transition={{ duration: 0.2 }}
+        >
           <h2 className="text-2xl font-bold mb-2">Línea de Emergencia 24/7</h2>
           <p className="text-lg mb-4">
             Para situaciones de emergencia, contáctenos en nuestra línea
             disponible las 24 horas:
           </p>
           <p className="text-3xl font-bold">+52 (55) 9876-5432</p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
