@@ -8,10 +8,8 @@ import SobreNosotrosPage from "./pages/aboutUs/SobreNosotrosPage";
 import Gallery from "./pages/galery/Gallery";
 import Servicios from "./pages/servicios";
 import NotFound from "./pages/notFound";
-import AvisoLegal from "./pages/legal/AvisoLegal"
-import Terminos from "./pages/legal/TerminosCondiciones"
-
-import PoliticaPrivacidad from "./pages/legal/PoliticaPrivacidad";
+// Import from the index file instead
+import { AvisoLegal, Terminos, PoliticaPrivacidad } from "./pages/legal";
 
 
 const AppRoutes = () => {
