@@ -8,9 +8,10 @@ import SobreNosotrosPage from "./pages/aboutUs/SobreNosotrosPage";
 import Gallery from "./pages/galery/Gallery";
 import Servicios from "./pages/servicios";
 import NotFound from "./pages/notFound";
-import AvisoLegal from "./pages/legal/AvisoLegal"
-import Terminos from "./pages/legal/TerminosCondiciones"
-import PoliticaPrivacidad from "./pages/legal/PoliticaPrivacidad";
+import AvisoLegal from "./pages/legal/AvisoLegal.jsx"
+import Terminos from "./pages/legal/TerminosCondiciones.jsx"
+import PoliticaPrivacidad from "./pages/legal/PoliticaPrivacidad.jsx";
+
 
 const AppRoutes = () => {
   return (
