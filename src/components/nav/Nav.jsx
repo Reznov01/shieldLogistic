@@ -16,10 +16,11 @@ export default function Nav() {
       "/atencion-clientes",
       "/cotizacion",
       "/galeria",
-      "/politica",
-      "/terminos",
-      "/aviso",
+      "/politica-privacidad",
+      "/terminos-condiciones",
+      "/aviso-legal",
       "/faq",
+      
     ];
 
     if (!knownRoutes.includes(location.pathname)) {

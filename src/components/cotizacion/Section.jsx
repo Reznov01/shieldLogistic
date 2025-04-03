@@ -1,4 +1,4 @@
-import ShieldLogo from "/shieldLogo.webp";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { motion } from "motion/react";
 import {
@@ -498,7 +498,7 @@ export default function Section() {
                     >
                       Acepto que la información proporcionada sea utilizada para
                       contactarme y enviarme una cotización personalizada. He
-                      leído y acepto la política de privacidad.
+                      leído y acepto la <Link to="/politica-privacidad" className="text-blue-500"> Politica de Privacidad </Link> .
                     </label>
                   </div>
                 </div>

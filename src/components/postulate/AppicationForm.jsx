@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function ApplicationForm({ positions }) {
   const [formData, setFormData] = useState({
@@ -170,7 +171,7 @@ export default function ApplicationForm({ positions }) {
             onChange={handleCheckboxChange}
           />
           <label htmlFor="terms" className="text-sm">
-            Acepto los términos y condiciones y autorizo el tratamiento de mis
+            Acepto los <Link to="/terminos-condiciones" className="text-blue-500"> términos y condiciones </Link> y autorizo el tratamiento de mis
             datos personales
           </label>
         </div>

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import {
-  Shield,
+  
   Phone,
   Clock,
   Mail,
@@ -281,12 +282,6 @@ export default function Section() {
                 </div>
 
                 <div className="mb-6">
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Mensaje *
-                  </label>
                   <textarea
                     id="message"
                     name="message"
@@ -298,14 +293,41 @@ export default function Section() {
                   ></textarea>
                 </div>
 
+                <div className="mb-6 flex items-center justify-around">
+                  <div className="flex items-start">
+                    <div className="flex items-center h-5">
+                      <input
+                        id="acceptTerms"
+                        name="acceptTerms"
+                        type="checkbox"
+                        checked={formData.acceptTerms}
+                        onChange={handleInputChange}
+                        className="w-4 h-4 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500"
+                        required
+                      />
+                    </div>
+                   <div className="ml-3">
+                   <div className="  text-sm">
+                      <label htmlFor="acceptTerms" className="font-medium text-gray-700">
+                        Acepto los{" "}
+                        <Link to="/terminos-condiciones" className="text-blue-700 hover:underline">
+                          términos y condiciones
+                        </Link>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="flex justify-end">
                   <button
                     type="submit"
-                    className="px-6 py-3 bg-blue-700 text-white font-medium rounded-md hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+                    className="px-6 -mb-2  py-3 bg-blue-700 text-white font-medium rounded-md hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+                    disabled={!formData.acceptTerms}
                   >
                     Enviar Mensaje
                   </button>
                 </div>
+                   </div>
               </form>
             </motion.div>
           </div>
