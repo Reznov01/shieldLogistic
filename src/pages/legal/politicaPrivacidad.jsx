@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function PoliticaPrivacidad() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-10 font-sans text-gray-800 mt-20">
@@ -258,6 +260,6 @@ export default function PoliticaPrivacidad() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
